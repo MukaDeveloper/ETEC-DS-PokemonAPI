@@ -13,6 +13,5 @@ namespace PokemonApi.Models {
         public int Ataque { get; set; }
         public int Defesa { get; set; }
         public int Velocidade { get; set; }
-        public List<Habilidade> Habilidades { get; set; } = new();
     }
 }

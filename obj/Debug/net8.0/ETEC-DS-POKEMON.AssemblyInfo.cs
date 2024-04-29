@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ETEC-DS-POKEMON")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fb1e1c75bf40bc7e3b65be6f75f13a07112d0d5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e86d252d9b0bebf5fe00b6b10b2c7fee9c05a1e5")]
 [assembly: System.Reflection.AssemblyProductAttribute("ETEC-DS-POKEMON")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ETEC-DS-POKEMON")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

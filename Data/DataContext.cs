@@ -1,23 +1,28 @@
 using Microsoft.EntityFrameworkCore;
 using PokemonApi.Models;
+using PokemonApi.Models.Enuns;
 
-namespace PokemonApi.Data {
-    public class DataContext : DbContext {
-        public DataContext(DbContextOptions<DataContext> options) : base(options) {
+namespace PokemonApi.Data
+{
+    public class DataContext : DbContext
+    {
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
+        {
         }
 
         public DbSet<Pokemon> TB_POKEMONS { get; set; }
         public DbSet<Habilidade> TB_HABILIDADES { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder) {
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
             modelBuilder.Entity<Pokemon>().ToTable("TB_POKEMONS");
             modelBuilder.Entity<Pokemon>().HasData(
-                new Pokemon() { Id = 1, Nome = "Bulbasaur", Altura = 0.7, Peso = 6.9, Genero = "M", Nivel = 1, Vida = 45, Ataque = 49, Defesa = 49, Velocidade = 45 },
-                new Pokemon() { Id = 2, Nome = "Ivysaur", Altura = 1.0, Peso = 13.0, Genero = "M", Nivel = 1, Vida = 60, Ataque = 62, Defesa = 63, Velocidade = 60 },
-                new Pokemon() { Id = 3, Nome = "Venusaur", Altura = 2.0, Peso = 100.0, Genero = "M", Nivel = 1, Vida = 80, Ataque = 82, Defesa = 83, Velocidade = 80 },
-                new Pokemon() { Id = 4, Nome = "Charmander", Altura = 0.6, Peso = 8.5, Genero = "M", Nivel = 1, Vida = 39, Ataque = 52, Defesa = 43, Velocidade = 65 },
-                new Pokemon() { Id = 5, Nome = "Charmeleon", Altura = 1.1, Peso = 19.0, Genero = "M", Nivel = 1, Vida = 58, Ataque = 64, Defesa = 58, Velocidade = 80 },
-                new Pokemon() { Id = 6, Nome = "Charizard", Altura = 1.7, Peso = 90.5, Genero = "M", Nivel = 1, Vida = 78, Ataque = 84, Defesa = 78, Velocidade = 100 }
+                new Pokemon() { Id = 1, Nome = "Bulbasaur", Altura = 0.7, Peso = 6.9, Genero = "M", Tipo = new List<TipoEnum> { TipoEnum.Planta, TipoEnum.Venenoso }, Nivel = 1, Vida = 45, Ataque = 49, Defesa = 49, Velocidade = 45 },
+                new Pokemon() { Id = 2, Nome = "Ivysaur", Altura = 1.0, Peso = 13.0, Genero = "M", Tipo = new List<TipoEnum> { TipoEnum.Planta, TipoEnum.Venenoso }, Nivel = 1, Vida = 60, Ataque = 62, Defesa = 63, Velocidade = 60 },
+                new Pokemon() { Id = 3, Nome = "Venusaur", Altura = 2.0, Peso = 100.0, Genero = "M", Tipo = new List<TipoEnum> { TipoEnum.Planta, TipoEnum.Venenoso }, Nivel = 1, Vida = 80, Ataque = 82, Defesa = 83, Velocidade = 80 },
+                new Pokemon() { Id = 4, Nome = "Charmander", Altura = 0.6, Peso = 8.5, Genero = "M", Tipo = new List<TipoEnum> { TipoEnum.Fogo }, Nivel = 1, Vida = 39, Ataque = 52, Defesa = 43, Velocidade = 65 },
+                new Pokemon() { Id = 5, Nome = "Charmeleon", Altura = 1.1, Peso = 19.0, Genero = "M", Tipo = new List<TipoEnum> { TipoEnum.Fogo }, Nivel = 1, Vida = 58, Ataque = 64, Defesa = 58, Velocidade = 80 },
+                new Pokemon() { Id = 6, Nome = "Charizard", Altura = 1.7, Peso = 90.5, Genero = "M", Tipo = new List<TipoEnum> { TipoEnum.Fogo, TipoEnum.Voador }, Nivel = 1, Vida = 78, Ataque = 84, Defesa = 78, Velocidade = 100 }
             );
             modelBuilder.Entity<Habilidade>().ToTable("TB_HABILIDADES");
             modelBuilder.Entity<Habilidade>().HasData(
