@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ETEC-DS-POKEMON.props" />
+</Project>

@@ -1,0 +1,6 @@
+@ETEC_DS_POKEMON_HostAddress = http://localhost:5260
+
+GET {{ETEC_DS_POKEMON_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
