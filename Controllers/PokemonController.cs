@@ -32,5 +32,20 @@ namespace PokemonApi.Controllers {
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpPost("create")]
+        public async Task<IActionResult> CreatePokemon(Pokemon pokemon) {
+            try {
+                if (pokemon.Nome != null && pokemon.Genero != null && pokemon.Tipo != null) {
+                    await _context.TB_POKEMONS.AddAsync(pokemon);
+                    await _context.SaveChangesAsync();
+                    return Ok(pokemon);
+                } else {
+                    return BadRequest("Insira um nome válido, um gênero válido e/ou um tipo válido.");
+                }
+            } catch (System.Exception ex) {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

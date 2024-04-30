@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+// dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 using PokemonApi.Models;
 using PokemonApi.Models.Enuns;
 
@@ -12,6 +13,7 @@ namespace PokemonApi.Data
 
         public DbSet<Pokemon> TB_POKEMONS { get; set; }
         public DbSet<Habilidade> TB_HABILIDADES { get; set; }
+        public DbSet<Habilidade> TB_TREINADORES { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -33,6 +35,17 @@ namespace PokemonApi.Data
                 new Habilidade() { Id = 5, Nome = "Flamethrower", Descricao = "Ataque com uma rajada de fogo intenso.", Poder = 90, Precisao = 100, PP = 15 },
                 new Habilidade() { Id = 6, Nome = "Fire Spin", Descricao = "Envolve o oponente em chamas por 2 a 5 turnos.", Poder = 35, Precisao = 85, PP = 15 },
                 new Habilidade() { Id = 7, Nome = "Slash", Descricao = "Um ataque cortante com alta chance de acerto crítico.", Poder = 70, Precisao = 100, PP = 20 }
+            );
+            modelBuilder.Entity<Treinador>().ToTable("TB_TREINADORES");
+            modelBuilder.Entity<Treinador>().HasData(
+                new Treinador() { Id = 1, Nome = "Brock", Insignias = new List<InsigniasEnum> { InsigniasEnum.Rocha }, Regiao = "Kanto", Pokemons = new List<Pokemon> { } },
+                new Treinador() { Id = 2, Nome = "Misty", Insignias = new List<InsigniasEnum> { InsigniasEnum.Cascata }, Regiao = "Kanto", Pokemons = new List<Pokemon> { } },
+                new Treinador() { Id = 3, Nome = "Sg. Surge", Insignias = new List<InsigniasEnum> { InsigniasEnum.Trovao }, Regiao = "Kanto", Pokemons = new List<Pokemon> { } },
+                new Treinador() { Id = 4, Nome = "Erika", Insignias = new List<InsigniasEnum> { InsigniasEnum.ArcoIris }, Regiao = "Kanto", Pokemons = new List<Pokemon> { } },
+                new Treinador() { Id = 5, Nome = "Koga", Insignias = new List<InsigniasEnum> { InsigniasEnum.Alma }, Regiao = "Kanto", Pokemons = new List<Pokemon> { } },
+                new Treinador() { Id = 6, Nome = "Sabrina", Insignias = new List<InsigniasEnum> { InsigniasEnum.Pantano }, Regiao = "Kanto", Pokemons = new List<Pokemon> { } },
+                new Treinador() { Id = 7, Nome = "Blaine", Insignias = new List<InsigniasEnum> { InsigniasEnum.Vulcao }, Regiao = "Kanto", Pokemons = new List<Pokemon> { } },
+                new Treinador() { Id = 8, Nome = "Giovanni", Insignias = new List<InsigniasEnum> { InsigniasEnum.Terra }, Regiao = "Kanto", Pokemons = new List<Pokemon> { } }
             );
         }
 

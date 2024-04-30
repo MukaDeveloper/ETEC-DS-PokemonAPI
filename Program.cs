@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+// dotnet add package Microsoft.EntityFrameworkCore.SqlServer.
 using PokemonApi.Data;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,7 @@ builder.Services.AddDbContext<DataContext>(options => {
 });
 // dotnet ef migrations add InitialCreate
 // dotnet ef database update
+// dotnet ef migrations script -o ./script01_Tabela.sql
 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
