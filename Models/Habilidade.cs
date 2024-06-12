@@ -9,5 +9,6 @@ namespace PokemonApi.Models {
         public int Poder { get; set; }
         public int Precisao { get; set; }
         public int PP { get; set; }
+        public List<Pokemon>? Pokemons { get; set; }
     }
 }

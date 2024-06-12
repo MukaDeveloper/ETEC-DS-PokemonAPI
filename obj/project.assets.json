@@ -4522,11 +4522,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ETEC\\DS\\ETEC-DS-PokemonAPI\\ETEC-DS-POKEMON.csproj",
+      "projectUniqueName": "D:\\2DS_Catarine_Samuel\\DS\\ETEC-DS-PokemonAPI\\ETEC-DS-POKEMON.csproj",
       "projectName": "ETEC-DS-POKEMON",
-      "projectPath": "E:\\ETEC\\DS\\ETEC-DS-PokemonAPI\\ETEC-DS-POKEMON.csproj",
+      "projectPath": "D:\\2DS_Catarine_Samuel\\DS\\ETEC-DS-PokemonAPI\\ETEC-DS-POKEMON.csproj",
       "packagesPath": "C:\\Users\\etechas\\.nuget\\packages\\",
-      "outputPath": "E:\\ETEC\\DS\\ETEC-DS-PokemonAPI\\obj\\",
+      "outputPath": "D:\\2DS_Catarine_Samuel\\DS\\ETEC-DS-PokemonAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

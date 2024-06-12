@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yI4OXB6ts1acMrP2ClFg8NEdnKWDRM2QmjYQM+i62aUvUAQo6dVW+AxrurhSWLhZArm7sEjffOJnSxSDbij4lg==",
+  "dgSpecHash": "otEqfnEU0RvsYbVbpqIPSk40I1gkHvH1mXJzmaqU6bB8OPvGGX5Tu6MXueWOndBKsLHzIg2fmTgOOv1nylUTsw==",
   "success": true,
-  "projectFilePath": "E:\\ETEC\\DS\\ETEC-DS-PokemonAPI\\ETEC-DS-POKEMON.csproj",
+  "projectFilePath": "D:\\2DS_Catarine_Samuel\\DS\\ETEC-DS-PokemonAPI\\ETEC-DS-POKEMON.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\etechas\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\etechas\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

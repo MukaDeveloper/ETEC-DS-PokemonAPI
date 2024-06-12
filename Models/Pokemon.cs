@@ -1,4 +1,5 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
 using PokemonApi.Models.Enuns;
 
 namespace PokemonApi.Models {
@@ -10,11 +11,9 @@ namespace PokemonApi.Models {
         public double Peso { get; set; }
         public string Genero { get; set; } = "";
         public List<TipoEnum> Tipo { get; set; } = new();
-        public int Nivel { get; set; }
-        public int Vida { get; set; }
-        public int Ataque { get; set; }
-        public int Defesa { get; set; }
-        public int Velocidade { get; set; }
+        public int? TreinadorId { get; set; }
+        [JsonIgnore]
+        public Treinador? Treinador { get; set; }
         public List<Habilidade> Habilidades { get; set; } = new();
     }
 }
