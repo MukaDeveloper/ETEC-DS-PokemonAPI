@@ -10,10 +10,7 @@ namespace PokemonApi.Models {
         public double Altura { get; set; }
         public double Peso { get; set; }
         public string Genero { get; set; } = "";
-        public List<TipoEnum> Tipo { get; set; } = new();
-        public int? TreinadorId { get; set; }
-        [JsonIgnore]
-        public Treinador? Treinador { get; set; }
-        public List<Habilidade> Habilidades { get; set; } = new();
+        public List<TipoEnum> Tipo { get; set; }
+        public List<TreinadorPokemon> TreinadorPokemons { get; set; } = new();
     }
 }

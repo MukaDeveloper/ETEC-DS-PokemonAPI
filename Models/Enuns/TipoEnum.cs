@@ -2,8 +2,8 @@ namespace PokemonApi.Models.Enuns {
     public enum TipoEnum {
         Inseto,
         Sombrio,
-        Dragão,
-        Elétrico,
+        Dragao,
+        Eletrico,
         Fada,
         Lutador,
         Fogo,
@@ -14,9 +14,9 @@ namespace PokemonApi.Models.Enuns {
         Gelo,
         Normal,
         Venenoso,
-        Psíquico,
+        Psiquico,
         Pedra,
-        Aço,
-        Água,
+        Aco,
+        Agua,
     }
 }
